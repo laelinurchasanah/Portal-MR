@@ -14,7 +14,7 @@ const modulData = [
       type: "materi",
       description:
         "Ringkasan\x20Permen\x20ATR/BPN\x20No\x201\x20Tahun\x202026.",
-      flipUrl: "https://online.fliphtml5.com/example/modul2/",
+      flipUrl: "https://online.fliphtml5.com/jhqkx/Permen-atrbpn-no-1-tahun-2026/",
     },
     {
       id: 0x3,
