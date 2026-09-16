@@ -57,7 +57,6 @@ const modulData = [
 ];
 
 // MASTER DATA VIDEO PEMBELAJARAN (YOUTUBE)
-// videoId diambil dari URL youtube (contoh: youtube.com/watch?v=VIDEOID)
 const videoData = [
   {
     id: 1,
