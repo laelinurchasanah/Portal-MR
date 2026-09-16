@@ -107,8 +107,8 @@ const riskRegisterDriveData = {
       "https://docs.google.com/spreadsheets/d/1FHs1zHzad-RtWu2qPGdJC71WdSSKBCB5/edit?usp=sharing&ouid=110118457664365031197&rtpof=true&sd=true",
   },
   q3: {
-    embedUrl: "",
-    directUrl: "",
+    embedUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTJRe8dmONsQyoQl5-HfAEf0mqqNAfw6Q8MMelxUMPtt6mojVoYMJDIpFQToAIAAA/pubhtml",
+    directUrl: "https://docs.google.com/spreadsheets/d/1Vd2QOtJ1VqI7s-2h2eQyYdzxOs3mn-26/edit?usp=sharing&ouid=110118457664365031197&rtpof=true&sd=true",
   },
   q4: {
     embedUrl: "",
