@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initDashboard() {
   updateStats();
   renderModulTabs('semua');
+  renderVideoCarousel();
   switchQuarter('q1'); // Standar default ke Q1 2026
 }
 
@@ -78,6 +79,47 @@ function renderModulTabs(filterType) {
     `;
     grid.appendChild(card);
   });
+}
+
+// RENDER CAROUSEL VIDEO PEMBELAJARAN (YOUTUBE)
+function renderVideoCarousel() {
+  const carousel = document.getElementById('videoCarousel');
+  if (!carousel) return;
+  carousel.innerHTML = '';
+
+  videoData.forEach(video => {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.id = `videoCard-${video.id}`;
+    card.innerHTML = `
+      <div class="video-thumb-wrap" onclick="playVideo(${video.id}, '${video.videoId}')">
+        <img src="https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg" alt="${video.title}" loading="lazy">
+        <div class="video-play-overlay"><i class="fa-solid fa-circle-play"></i></div>
+      </div>
+      <div class="video-card-body">
+        <div class="video-card-title">${video.title}</div>
+        <div class="video-card-desc">${video.description}</div>
+      </div>
+    `;
+    carousel.appendChild(card);
+  });
+}
+
+// GANTI THUMBNAIL DENGAN IFRAME YOUTUBE SAAT DIKLIK (PLAY INLINE)
+function playVideo(id, videoId) {
+  const card = document.getElementById(`videoCard-${id}`);
+  if (!card) return;
+  const thumbWrap = card.querySelector('.video-thumb-wrap');
+  thumbWrap.outerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+
+// GESER CAROUSEL VIDEO KE KIRI/KANAN
+function scrollVideoCarousel(direction) {
+  const carousel = document.getElementById('videoCarousel');
+  if (!carousel) return;
+  const cardWidth = carousel.querySelector('.video-card')?.offsetWidth || 280;
+  const scrollAmount = (cardWidth + 16) * 2; // geser sejauh 2 kartu, 16 = gap
+  carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
 
 // LOGIKA SWITCH TRIWULAN REGISTER RISIKO 2026

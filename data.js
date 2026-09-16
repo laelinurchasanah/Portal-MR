@@ -56,6 +56,41 @@ const modulData = [
   },
 ];
 
+// MASTER DATA VIDEO PEMBELAJARAN (YOUTUBE)
+// videoId diambil dari URL youtube (contoh: youtube.com/watch?v=VIDEOID)
+const videoData = [
+  {
+    id: 1,
+    title: "Teori Dasar Manajemen Risiko",
+    description: "Pemahaman yang komprehensif terhadap konsep dasar risiko bagi ASN dalam merencanakan dan mengeksekusi program kerja.",
+    videoId: "ePDytHCMPbE",
+  },
+  {
+    id: 2,
+    title: "Proses Manajemen Risiko",
+    description: "Pengelolaan risiko bukanlah aktivitas satu waktu, melainkan sebuah proses yang sistematis, terukur, dan berkelanjutan.",
+    videoId: "afq5tLpseLc",
+  },
+    {
+    id: 3,
+    title: "Peyusunan Risk Register",
+    description: "Risk Register adalah dokumen wajib untuk memetakan, mendokumentasikan, dan memantau risiko di setiap unit kerja.",
+    videoId: "W9xkJEcTrpY",
+  },
+    {
+      "id": 4,
+      "title": "Konsep Umum Penegakan Integritas dan Nilai Etika",
+      "description": "Memahami pemahaman dasar, prinsip moral, dan pentingnya budaya etika dalam organisasi.",
+      "videoId": "UE4y-w9fdTQ"
+    },
+    {
+      "id": 5,
+      "title": "Implementasi Penegakan Integritas dan Nilai Etika",
+      "description": "Penerapan kode etik, mekanisme pengawasan, dan penegakan sanksi di lingkungan kerja.",
+      "videoId": "pWUQTrCYJwY"
+    }
+];
+
 // MASTER LINK GOOGLE DRIVE / GOOGLE SHEETS REGISTER RISIKO 2026
 const riskRegisterDriveData = {
   q1: {
